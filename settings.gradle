@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "MyFirstApp"
+include ':app'
+include ':interfacetp'
+include ':findviewbyid'
+include ':tprandom'
+include ':databinding'
+include ':tpvraifaux'
+include ':navigationapi'
