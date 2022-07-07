@@ -26,9 +26,11 @@ class fragmentPrenom : Fragment() {
         button.setOnClickListener {
             var random = Random.nextInt(1, 100)
             if (random > 50) {
-                Navigation.findNavController(view).navigate(R.id.action_fragmentPrenom_to_fragmentRouge)
+                Navigation.findNavController(view).navigate(
+                    R.id.action_fragmentPrenom_to_fragmentRouge)
             } else {
-                Navigation.findNavController(view).navigate(R.id.action_fragmentPrenom_to_fragmentRose)
+                Navigation.findNavController(view).navigate(
+                    R.id.action_fragmentPrenom_to_fragmentRose)
             }
         }
     }
