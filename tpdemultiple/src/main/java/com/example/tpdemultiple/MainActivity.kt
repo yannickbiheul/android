@@ -1,13 +1,14 @@
 package com.example.tpdemultiple
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.tpdemultiple.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() , View.OnClickListener {
 
     lateinit var binding : ActivityMainBinding
     lateinit var viewModel : DeViewModel
@@ -24,30 +25,22 @@ class MainActivity : AppCompatActivity() {
          * Observer : textViewValueDice
          */
         viewModel.valeurDe.observe(this, Observer {
-            binding.textViewValueDice.text = it?.toString()
+            binding.valDe = it
         })
 
         // initialisation des champs UI
         binding.textViewValueDice.text = viewModel.valeurDe.toString()
 
-        // Boutons lancer dés
-        binding.buttonDice4.setOnClickListener {
-            viewModel.lancer(4)
-        }
-        binding.buttonDice6.setOnClickListener {
-            viewModel.lancer(6)
-        }
-        binding.buttonDice8.setOnClickListener {
-            viewModel.lancer(8)
-        }
-        binding.buttonDice16.setOnClickListener {
-            viewModel.lancer(16)
-        }
-        binding.buttonDice20.setOnClickListener {
-            viewModel.lancer(20)
-        }
-        binding.buttonDice24.setOnClickListener {
-            viewModel.lancer(24)
+    }
+
+    override fun onClick(v: View?) {
+        when(v?.id) {
+            R.id.buttonDice4 -> viewModel.lancer(4)
+            R.id.buttonDice6 -> viewModel.lancer(6)
+            R.id.buttonDice8 -> viewModel.lancer(8)
+            R.id.buttonDice16 -> viewModel.lancer(16)
+            R.id.buttonDice20 -> viewModel.lancer(20)
+            R.id.buttonDice24 -> viewModel.lancer(24)
         }
     }
 }
