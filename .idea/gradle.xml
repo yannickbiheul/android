@@ -19,9 +19,12 @@
             <option value="$PROJECT_DIR$/navigationsafeargs" />
             <option value="$PROJECT_DIR$/navintent" />
             <option value="$PROJECT_DIR$/tpcolorme" />
+            <option value="$PROJECT_DIR$/tplancerde" />
+            <option value="$PROJECT_DIR$/tplancerdede" />
             <option value="$PROJECT_DIR$/tpraconte" />
             <option value="$PROJECT_DIR$/tprandom" />
             <option value="$PROJECT_DIR$/tpvraifaux" />
+            <option value="$PROJECT_DIR$/viewmodel" />
           </set>
         </option>
       </GradleProjectSettings>
