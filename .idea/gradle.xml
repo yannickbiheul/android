@@ -19,6 +19,7 @@
             <option value="$PROJECT_DIR$/navigationapi" />
             <option value="$PROJECT_DIR$/navigationsafeargs" />
             <option value="$PROJECT_DIR$/navintent" />
+            <option value="$PROJECT_DIR$/punkapi" />
             <option value="$PROJECT_DIR$/recyclerview" />
             <option value="$PROJECT_DIR$/room" />
             <option value="$PROJECT_DIR$/tpcolorme" />
@@ -29,6 +30,7 @@
             <option value="$PROJECT_DIR$/tprandom" />
             <option value="$PROJECT_DIR$/tpvraifaux" />
             <option value="$PROJECT_DIR$/viewmodel" />
+            <option value="$PROJECT_DIR$/wine" />
           </set>
         </option>
       </GradleProjectSettings>
