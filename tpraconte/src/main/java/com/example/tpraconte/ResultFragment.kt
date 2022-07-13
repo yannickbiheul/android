@@ -20,7 +20,7 @@ class ResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val resultFragmentArgs = arguments?.let { ResultFragmentArgs.fromBundle(it) }
-        val textView = view.findViewById<TextView>(R.id.textViewHistoire)
+        val textView = view.findViewById<TextView>(R.id.textViewHistoire2)
         textView.text = "" +
                 "Il était une fois un être nommé ${resultFragmentArgs?.histoire?.prenom} " +
                 "qui vivait dans un(e) ${resultFragmentArgs?.histoire?.lieu}..."
