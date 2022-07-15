@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import okhttp3.*
+import org.json.JSONArray
 import java.io.IOException
 
 // logt
@@ -22,7 +23,11 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onResponse(call: Call, response: Response) {
-                Log.i(TAG, "onResponse: ${response.body?.string()}")
+                val stringBeer = response.body?.string()
+                val jsonArray = JSONArray(stringBeer)
+                val beerJson = jsonArray.getJSONObject(0)
+                Log.i(TAG, "onResponse: Nom de la bière : ${beerJson?.get("name")}")
+                Log.i(TAG, "onResponse: Degré d'alcool : ${beerJson?.get("abv")}")
             }
         })
     }
